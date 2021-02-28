@@ -5,7 +5,7 @@ from .sender import StartConversationMessage, SendTextMessage
 
 class Client:
 
-    def __init__(self, bot_api_url, listener_host: str = "127.0.0.1", listener_port: int = 5789):
+    def __init__(self, bot_api_url, listener_host: str = "localhost", listener_port: int = 5789):
 
         # Save the urls
         self.bot_api_url = bot_api_url
