@@ -1,5 +1,7 @@
+
 import threading
 from http import HTTPStatus
+
 from flask import Flask, request, Response
 from flask.views import MethodView
 
@@ -26,7 +28,7 @@ class Listener(threading.Thread):
         # self.app.add_url_rule('/{tail:.*}', view_func=CatchAll.as_view('catch_all'), methods=['POST'])
 
     def run(self):
-        self.app.run(host=self.host, port=self.port, debug=True, use_reloader=False)
+        self.app.run(host=self.host, port=self.port, debug=False, use_reloader=False)
 
 
 class Conversation(MethodView):
