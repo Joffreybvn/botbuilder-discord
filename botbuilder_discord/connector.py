@@ -5,8 +5,9 @@ from .client import Client
 
 class OfflineConnector:
 
-    def __init__(self, bot_api_url: str = "http://127.0.0.1:3978/api/messages", listener_port: int = 5789):
-        self.client = Client(bot_api_url, listener_port=listener_port)
+    def __init__(self, bot_api_url: str = "http://127.0.0.1:3978/api/messages",
+                 listener_host: str = "127.0.0.1", listener_port: int = 5789):
+        self.client = Client(bot_api_url, listener_host, listener_port)
 
         self.has_started = []
 
