@@ -10,7 +10,7 @@ from botbuilder_discord.client import response_queue
 
 class Listener(threading.Thread):
 
-    def __init__(self, host: str = "localhost", port: int = 5789):
+    def __init__(self, host: str = "127.0.0.1", port: int = 5789):
         super().__init__()
 
         self.host = host
